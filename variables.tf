@@ -185,6 +185,12 @@ variable "target_groups_defaults" {
   }
 }
 
+variable "load_balancing_algorithm_type" {
+  description = "Determines how the load balancer selects targets when routing requests. Only applicable for Application Load Balancer Target Groups"
+  type = string
+  default = "round_robin"
+}
+
 variable "vpc_id" {
   description = "VPC id where the load balancer and other resources will be deployed."
   type        = string

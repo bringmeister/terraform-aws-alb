@@ -146,6 +146,7 @@ MIT Licensed. See [LICENSE](https://github.com/terraform-aws-modules/terraform-a
 | idle\_timeout | The time in seconds that the connection is allowed to be idle. | number | `60` | no |
 | ip\_address\_type | The type of IP addresses used by the subnets for your load balancer. The possible values are ipv4 and dualstack. | string | `ipv4` | no |
 | listener\_ssl\_policy\_default | The security policy if using HTTPS externally on the load balancer. [See](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html). | string | `ELBSecurityPolicy-2016-08` | no |
+| load\_balancer\_algorithm\_type | Determines how the load balancer selects targets when routing requests. Only applicable for Application Load Balancer Target Groups. | string | `round_robin` | no |
 | load\_balancer\_create\_timeout | Timeout value when creating the ALB. | string | `10m` | no |
 | load\_balancer\_delete\_timeout | Timeout value when deleting the ALB. | string | `10m` | no |
 | load\_balancer\_is\_internal | Boolean determining if the load balancer is internal or externally facing. | string | `false` | no |

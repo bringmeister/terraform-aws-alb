@@ -36,6 +36,9 @@ resource "aws_lb_target_group" "main" {
   vpc_id   = var.vpc_id
   port     = var.target_groups[count.index]["backend_port"]
   protocol = upper(var.target_groups[count.index]["backend_protocol"])
+
+  load_balancing_algorithm_type = var.load_balancing_algorithm_type
+
   deregistration_delay = lookup(
     var.target_groups[count.index],
     "deregistration_delay",
